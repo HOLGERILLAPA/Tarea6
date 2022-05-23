@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarea6.Estudiantes">
+    
+    <ContentPage.Content>
+        
+        <StackLayout Padding="14">
+            <Label Text="Consumir Webservice Get" FontSize="16" HorizontalTextAlignment="Center">
+            </Label>
+            <Label x:Name="texto" Text=""></Label>
+            <Button x:Name="bntConsultar" Text="Consultar" Clicked="bntConsultar_Clicked"></Button>
+            <Button x:Name="btnInsertar" Text="Insertar Estudiante" Clicked="btnInsertar_Clicked" Grid.Row="0" Grid.Column="0"></Button>
+            <ListView x:Name="MyListView" ItemSelected="MyListView_ItemSelected">
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+
+                                <Label x:Name="lblnombre" Text="{Binding nombre}"></Label>
+                                <Label x:Name="lblapellido" Text="{Binding apellido}"></Label>
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>   
+                
+                
+            </ListView>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
